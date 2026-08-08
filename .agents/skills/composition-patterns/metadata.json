@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "organization": "Engineering",
+  "date": "January 2026",
+  "abstract": "Composition patterns for building flexible, maintainable React components. Avoid boolean prop proliferation by using compound components, lifting state, and composing internals. These patterns make codebases easier for both humans and AI agents to work with as they scale.",
+  "references": [
+    "https://react.dev",
+    "https://react.dev/learn/passing-data-deeply-with-context",
+    "https://react.dev/reference/react/use"
+  ],
+  "source": "https://github.com/vercel-labs/agent-skills",
+  "sourceCommit": "7c180d9044c9ae2b442b567aad4e42a28dd5ed62",
+  "sourceDate": "2026-07-31"
+}

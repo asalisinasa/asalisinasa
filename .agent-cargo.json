@@ -1,0 +1,6 @@
+{
+    "presets": ["core", "react-next"],
+    "tools": ["codex", "cursor"],
+    "packageManager": "npm",
+    "commitManagedFiles": true
+}
