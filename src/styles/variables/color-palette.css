@@ -1,0 +1,28 @@
+@layer tokens {
+    :root {
+        /* Surfaces */
+        --bg: #fdfbff;
+        --terminal-bg: #fcfbff;
+        --terminal-border: #d7ddec;
+        --divider: #e3e7f1;
+        --card-bg: #ffffff;
+
+        /* Text */
+        --text: #4a556d;
+        --text-strong: #273247;
+        --muted: #7f8699;
+
+        /* Green */
+        --green: #6f9278;
+        --green-soft: #cee9d4;
+        --green-border: #a8cdb5;
+
+        /* Pink */
+        --pink: #8f6f96;
+        --pink-soft: #e2cee9;
+        --pink-border: #e2cee9;
+
+        /* Sand */
+        --sand: #e9e2ce;
+    }
+}
