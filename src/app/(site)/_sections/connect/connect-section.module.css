@@ -1,0 +1,101 @@
+.section {
+    margin-block: 0 var(--spacing-4x-large);
+}
+
+.command {
+    margin: 0 0 var(--spacing-small);
+    color: var(--green);
+    font: var(--font-weight-bold) var(--font-size-command) / var(--line-height-tight) var(--mono);
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.entry {
+    /* display: grid;
+    grid-template-columns: var(--size-index) minmax(5.5rem, var(--size-label-max)) minmax(0, 1fr);
+    gap: var(--spacing-small);
+    align-items: baseline;
+    padding: var(--spacing-2x-small) 0;
+    animation: entry-in var(--animation-entry) both;
+    animation-delay: calc(var(--i, 0) * var(--animation-entry-stagger)); */
+}
+
+.idx {
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+}
+
+.name {
+    color: var(--text-strong);
+    font-weight: var(--font-weight-bold);
+}
+
+.link {
+    display: grid;
+    grid-template-columns: var(--size-index) minmax(
+            var(--size-label-min),
+            var(--size-label-max)
+        ) minmax(0, 1fr);
+    gap: var(--spacing-small);
+    align-items: baseline;
+    padding: var(--spacing-2x-small) 0;
+
+    @media (--md) {
+        grid-template-columns: var(--size-index) auto minmax(0, 1fr) auto;
+        padding: var(--spacing-medium) 0;
+    }
+}
+
+.linkLabel {
+    display: block;
+    position: relative;
+    color: var(--green);
+    white-space: nowrap;
+    transition:
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.linkLabel::before {
+    content: "→ ";
+    color: var(--muted);
+}
+
+.link:hover .linkLabel,
+.link:focus-visible .linkLabel {
+    color: var(--pink);
+    text-decoration: underline;
+
+    &::before {
+        color: var(--pink);
+    }
+}
+
+@keyframes entry-in {
+    from {
+        opacity: 0;
+        transform: translateX(var(--animation-entry-offset));
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (--sm) {
+    .link {
+        grid-template-columns: var(--size-index-sm) minmax(0, 1fr);
+        gap: var(--spacing-2x-small) var(--spacing-small);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .entry {
+        animation: none;
+    }
+}

@@ -1,0 +1,18 @@
+.statusLine {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-4x-large);
+    align-items: baseline;
+}
+
+.command {
+    margin: 0;
+    color: var(--green);
+    font: var(--font-weight-bold) var(--font-size-command) / var(--line-height-tight) var(--mono);
+}
+
+.line {
+    margin: 0;
+    color: var(--text);
+    font-size: var(--font-size-body);
+}

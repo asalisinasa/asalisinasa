@@ -1,0 +1,20 @@
+.section {
+    margin-block: 0 var(--spacing-4x-large);
+}
+
+.command {
+    margin: 0 0 var(--spacing-small);
+    color: var(--green);
+    font: var(--font-weight-bold) var(--font-size-command) / var(--line-height-tight) var(--mono);
+}
+
+.line {
+    margin: 0;
+    color: var(--text);
+    font-size: var(--font-size-body);
+}
+
+.strong {
+    color: var(--text-strong);
+    font-weight: var(--font-weight-bold);
+}
