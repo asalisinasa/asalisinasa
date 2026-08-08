@@ -1,0 +1,30 @@
+.DS_Store
+
+# Dependencies and build output
+node_modules/
+.next/
+out/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local tool state
+.local.*
+.agents/docs/wiki/
+.sanity/
+
+# Repomix output
+.repomix/
+repomix-output.*
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
