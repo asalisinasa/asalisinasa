@@ -1,9 +1,9 @@
 import type { CSSProperties } from "react";
 
 import type { ProfileLink } from "@/sanity/types";
-import { TerminalSection } from "@/components/terminal-section";
+import { TerminalSection } from "@/ui/terminal-section";
 
-import styles from "./connect-section.module.css";
+import styles from "./section-connect.module.css";
 
 function formatLinkDisplay(href: string): string {
     if (href.startsWith("mailto:")) {
@@ -31,7 +31,7 @@ function isExternalHref(href: string): boolean {
     return href.startsWith("http://") || href.startsWith("https://");
 }
 
-export function ConnectSection({ links }: { links: ProfileLink[] }) {
+export function SectionConnect({ links }: { links: ProfileLink[] }) {
     return (
         <TerminalSection title="connect --list" ariaLabel="Connect section">
             <ol className={styles.list} aria-label="Contact links">

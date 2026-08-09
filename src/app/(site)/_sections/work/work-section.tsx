@@ -1,5 +1,5 @@
 import type { Project } from "@/sanity/types";
-import { TerminalSection } from "@/components/terminal-section";
+import { TerminalSection } from "@/ui/terminal-section";
 
 import styles from "./work-section.module.css";
 

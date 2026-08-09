@@ -1,8 +1,9 @@
-@import "../styles/tokens.css";
+@import "@/ui/styles/index.css";
 
 @layer reset, base, utilities;
 
 @layer reset {
+
     *,
     *::before,
     *::after {
@@ -63,12 +64,11 @@
     button:focus-visible {
         border-radius: var(--radius-sm);
         outline: none;
-        box-shadow: 0 0 0 var(--focus-ring-width)
-            color-mix(in srgb, var(--green-border), transparent 50%);
+        box-shadow: 0 0 0 var(--focus-ring-width) color-mix(in srgb, var(--sand-border), transparent 50%);
     }
 
     ::selection {
-        background: var(--green-soft);
+        background: var(--sand-soft);
         color: var(--text-strong);
     }
 }

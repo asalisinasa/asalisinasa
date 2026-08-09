@@ -1,6 +1,6 @@
 import { defineField } from "sanity";
 
-export const terminalSectionFields = [
+export const sectionTerminalFields = [
     defineField({
         name: "slug",
         title: "Slug",
@@ -21,18 +21,5 @@ export const terminalSectionFields = [
         title: "Aria label",
         type: "string",
         description: "Used as the section aria-label",
-    }),
-    defineField({
-        name: "description",
-        title: "Description",
-        type: "string",
-        description: "One-line summary shown under the heading",
-    }),
-    defineField({
-        name: "richtext",
-        title: "Rich text",
-        type: "array",
-        of: [{ type: "block" }],
-        description: "Main body content of the section",
     }),
 ];
