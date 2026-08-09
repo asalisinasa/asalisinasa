@@ -16,4 +16,11 @@ export const structure: StructureResolver = (S) =>
                 ),
             S.divider(),
             S.documentTypeListItem("project").title("Projects"),
+            S.listItem()
+                .title("Whoami section")
+                .child(
+                    S.document()
+                        .schemaType("whoamiSection")
+                        .documentId("whoamiSection"),
+                ),
         ]);
