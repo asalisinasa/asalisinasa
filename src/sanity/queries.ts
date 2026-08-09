@@ -1,6 +1,6 @@
 import { defineQuery } from "next-sanity";
 
-import type { Profile, SiteSettings } from "./types";
+import type { HomePage, SiteSettings } from "./types";
 
 export const siteSettingsQuery = defineQuery(`
     *[_type == "siteSettings" && _id == "siteSettings"][0] {
@@ -10,32 +10,47 @@ export const siteSettingsQuery = defineQuery(`
     }
 `);
 
-export const profileQuery = defineQuery(`
-    *[_type == "profile" && _id == "profile"][0] {
-        name,
-        role,
-        uptime,
-        currentFocus,
-        status,
-        links[] {
-            label,
-            href,
-            kind
-        },
-        "featuredProjects": featuredProjects[]-> {
+export const homePageQuery = defineQuery(`
+    *[_type == "pageHome" && _id == "pageHome"][0] {
+        title,
+        sections[]->{
+            _type,
+            _id,
             "slug": slug.current,
             title,
-            description,
-            tags,
-            accentTags
+            ariaLabel,
+            _type == "whoamiSection" => {
+                name,
+                role
+            },
+            _type == "tagGroupsSection" => {
+                groups[] {
+                    _key,
+                    title,
+                    tone,
+                    skills
+                }
+            }
         },
-        skillGroups[] {
-            title,
-            tone,
-            skills
+        "profile": *[_type == "profile" && _id == "profile"][0] {
+            uptime,
+            currentFocus,
+            status,
+            links[] {
+                label,
+                href,
+                kind
+            },
+            "featuredProjects": featuredProjects[]-> {
+                "slug": slug.current,
+                title,
+                description,
+                tags,
+                accentTags
+            }
         }
     }
 `);
 
 export type SiteSettingsResult = SiteSettings;
-export type ProfileResult = Profile;
+export type HomePageResult = HomePage;

@@ -5,6 +5,7 @@ export type ProfileLink = {
 };
 
 export type SkillGroup = {
+    _key?: string;
     title: string;
     tone: "green" | "pink" | null;
     skills: string[] | null;
@@ -19,14 +20,38 @@ export type Project = {
 };
 
 export type Profile = {
-    name: string;
-    role: string;
     uptime: string | null;
     currentFocus: string | null;
     status: string | null;
     links: ProfileLink[] | null;
-    skillGroups: SkillGroup[] | null;
     featuredProjects: Project[] | null;
+};
+
+export type WhoamiSection = {
+    _type: "whoamiSection";
+    _id: string;
+    slug: string | null;
+    title: string;
+    ariaLabel: string | null;
+    name: string;
+    role: string;
+};
+
+export type TagGroupsSection = {
+    _type: "tagGroupsSection";
+    _id: string;
+    slug: string | null;
+    title: string;
+    ariaLabel: string | null;
+    groups: SkillGroup[] | null;
+};
+
+export type HomePageSection = WhoamiSection | TagGroupsSection;
+
+export type HomePage = {
+    title: string;
+    sections: HomePageSection[] | null;
+    profile: Profile | null;
 };
 
 export type SiteSettings = {
