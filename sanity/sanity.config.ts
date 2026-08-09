@@ -8,8 +8,8 @@ import { structure } from "./structure";
 import { apiVersion, dataset, projectId } from "./env";
 
 export default defineConfig({
-    name: "alina-stepanova-studio",
-    title: "Alina Stepanova Studio",
+    name: "asalisinasa-studio",
+    title: "asalisinasa Studio",
     projectId,
     dataset,
     apiVersion,
