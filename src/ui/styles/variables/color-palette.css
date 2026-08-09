@@ -17,6 +17,7 @@
     /* Text */
     --text: light-dark(#4a556d, #c9cfde);
     --text-strong: light-dark(#273247, #f3f1f8);
+    --text-selection: #273247;
     --muted: light-dark(#697286, #969fb4);
 
     /* Green */
@@ -47,6 +48,7 @@
       rgb(143 111 150 / 10%),
       rgb(0 0 0 / 28%)
     );
+    --bg-selection: light-dark(#cee9d4, #d8ade0);
 
     /* Theme control */
     --theme-control-bg: light-dark(rgb(255 255 255 / 56%), rgb(21 24 39 / 72%));

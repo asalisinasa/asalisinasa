@@ -144,7 +144,7 @@
   }
 
   ::selection {
-    background: var(--sand-soft);
-    color: var(--text-strong);
+    background: var(--bg-selection);
+    color: var(--text-selection);
   }
 }
