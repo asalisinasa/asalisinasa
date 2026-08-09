@@ -40,6 +40,13 @@ export const project = defineType({
             of: [{ type: "string" }],
             options: { layout: "tags" },
         }),
+        defineField({
+            name: "richtext",
+            title: "Rich text",
+            type: "array",
+            of: [{ type: "block" }],
+            description: "Main body content of the section",
+        }),
     ],
     preview: { select: { title: "title", subtitle: "slug" } },
 });
