@@ -4,8 +4,12 @@
     border-radius: var(--radius);
     background: color-mix(in srgb, var(--terminal-bg) 92%, white);
     box-shadow: var(--shadow);
-    margin: var(--spacing-x-large) 0;
+    margin: var(--spacing-large);
     max-height: calc(100vh - var(--space-page));
+
+    @media (--lg) {
+        margin: var(--spacing-x-large);
+    }
 }
 
 .bar {
@@ -38,8 +42,8 @@
 .body {
     overflow-y: auto;
     scrollbar-width: 1px;
-    scrollbar-color: var(--sand) var(--terminal-bg);
-    padding: var(--terminal-padding-block) var(--terminal-padding-inline);
+    scrollbar-color: var(--divider) var(--terminal-bg);
+    padding: 0 var(--terminal-padding-inline);
     font-family: var(--mono);
     max-height: calc(100vh - var(--space-page) - var(--size-bar-height));
 }
