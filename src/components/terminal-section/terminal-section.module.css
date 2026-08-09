@@ -1,0 +1,15 @@
+.section {
+    padding: var(--spacing-4x-large) 0;
+}
+
+.command {
+    display: flex;
+    gap: var(--spacing-medium);
+    margin: 0 0 var(--spacing-x-large);
+    color: var(--green);
+    font: var(--font-weight-bold) var(--font-size-command) / var(--line-height-tight) var(--mono);
+}
+
+.icon {
+    color: var(--pink);
+}
