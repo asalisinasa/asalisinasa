@@ -65,7 +65,7 @@
 
     @media (--md) {
         :root {
-            --space-page: var(--spacing-3x-large);
+            --space-page: var(--spacing-5x-large);
             --page-padding-block: var(--spacing-6x-large);
             --page-padding-inline: var(--spacing-3x-large);
             --terminal-padding-block: var(--spacing-4x-large);

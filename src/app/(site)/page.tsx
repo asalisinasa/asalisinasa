@@ -30,12 +30,14 @@ export default async function Home() {
                 <WhoamiSection name={profile.name} role={profile.role} />
                 {profile.uptime && <UptimeSection uptime={profile.uptime} />}
                 {profile.skillGroups?.length && <SkillsSection groups={profile.skillGroups} />}
-                {profile.featuredProjects?.length && (
-                    <WorkSection projects={profile.featuredProjects} />
-                )}
-                {profile.currentFocus && <FocusSection currentFocus={profile.currentFocus} />}
+
+                {/* {profile.featuredProjects?.length && (
+                    <WorkSection title="ls ~/selected-work/" projects={profile.featuredProjects} />
+                )} */}
+                {/* {profile.currentFocus && <FocusSection currentFocus={profile.currentFocus} />} */}
+                {/* {profile.status && <StatusSection status={profile.status} />} */}
+
                 {profile.links?.length && <ConnectSection links={profile.links} />}
-                {profile.status && <StatusSection status={profile.status} />}
             </Terminal>
         </main>
     );
