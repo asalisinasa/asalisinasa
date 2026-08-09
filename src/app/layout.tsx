@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { draftMode } from "next/headers";
 import { VisualEditing } from "next-sanity/visual-editing";
 
-import { DisableDraftMode } from "@/components/disable-draft-mode";
+import { DisableDraftMode } from "@/ui/disable-draft-mode";
 import { SanityLive, sanityFetch } from "@/sanity/lib/live";
 import { siteSettingsQuery } from "@/sanity/queries";
 import type { SiteSettings } from "@/sanity/types";

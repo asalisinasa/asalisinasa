@@ -2,23 +2,29 @@ import type { ReactNode } from "react";
 
 import styles from "./terminal-section.module.css";
 
+export interface TerminalSectionProps {
+    title: string;
+    ariaLabel: string;
+    children: ReactNode;
+    isHero?: boolean;
+}
+
 export function TerminalSection({
     title,
     ariaLabel,
     children,
-}: {
-    title: string;
-    ariaLabel: string;
-    children: ReactNode;
-}) {
+    isHero = false,
+}: TerminalSectionProps) {
+    const TitleElement = isHero ? 'h1' : 'h2';
+
     return (
         <section className={styles.section} aria-label={ariaLabel}>
-            <h2 className={styles.command} id={title}>
+            <TitleElement className={styles.command} id={title}>
                 <span className={styles.icon} aria-hidden="true">
                     ▸
                 </span>
                 <span className={styles.title}>{title}</span>
-            </h2>
+            </TitleElement>
             <div className={styles.body}>{children}</div>
         </section>
     );

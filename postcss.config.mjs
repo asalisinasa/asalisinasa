@@ -2,7 +2,7 @@
 const config = {
     plugins: {
         "@csstools/postcss-global-data": {
-            files: ["./src/styles/variables/breakpoints.css"],
+            files: ["./src/ui/styles/variables/breakpoints.css"],
         },
         "postcss-custom-media": {},
     },
