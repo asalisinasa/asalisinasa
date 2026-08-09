@@ -1,5 +1,9 @@
 .layoutWindow {
-  --layout-window-bg: color-mix(in srgb, var(--terminal-bg) 92%, var(--surface-mix));
+  --layout-window-bg: color-mix(
+    in srgb,
+    var(--terminal-bg) 92%,
+    var(--surface-mix)
+  );
 
   position: relative;
   display: flex;
@@ -71,6 +75,7 @@
   flex: 1;
   min-height: 0;
   overflow-y: auto;
+  overflow-x: hidden;
   overscroll-behavior: contain;
   scrollbar-gutter: stable;
   scrollbar-width: thin;

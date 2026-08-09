@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { FooterWindow } from "./footer-window";
 import { HeaderWindow } from "./header-window";
 import { MainWindow } from "./main-window";
+
 import styles from "./layout-window.module.css";
 
 function LayoutWindowRoot({ children }: { children: ReactNode }) {
@@ -16,5 +17,5 @@ function LayoutWindowRoot({ children }: { children: ReactNode }) {
 export const LayoutWindow = Object.assign(LayoutWindowRoot, {
   Header: HeaderWindow,
   Main: MainWindow,
-  Footer: FooterWindow,
+  Footer: FooterWindow
 });

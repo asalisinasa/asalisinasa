@@ -12,7 +12,7 @@ const projects = [
     title: "component-library",
     description: "Reusable UI components and APIs",
     tags: ["React"],
-    accentTags: ["DS"],
+    accentTags: ["DS"]
   },
   {
     id: "project-agentic-dev-harness",
@@ -20,7 +20,7 @@ const projects = [
     title: "agentic-dev-harness",
     description: "AI-ready docs, skills and workflows",
     tags: ["DX"],
-    accentTags: ["AI"],
+    accentTags: ["AI"]
   },
   {
     id: "project-classifieds-redesign",
@@ -28,7 +28,7 @@ const projects = [
     title: "classifieds-redesign",
     description: "UI layer for high-traffic marketplace",
     tags: ["TS"],
-    accentTags: ["SPA"],
+    accentTags: ["SPA"]
   },
   {
     id: "project-a11y-performance",
@@ -36,29 +36,37 @@ const projects = [
     title: "a11y-performance",
     description: "WCAG patterns and rendering optimization",
     tags: ["A11y"],
-    accentTags: ["Perf"],
-  },
+    accentTags: ["Perf"]
+  }
 ] as const;
 
 const skillGroups = [
-  { title: "[frontend]", tone: "green", skills: ["React", "TypeScript", "Next.js", "SPA"] },
+  {
+    title: "[frontend]",
+    tone: "green",
+    skills: ["React", "TypeScript", "Next.js", "SPA"]
+  },
   {
     title: "[product craft]",
     tone: "green",
-    skills: ["Ownership", "Prototyping", "UX intuition", "Edge cases"],
+    skills: ["Ownership", "Prototyping", "UX intuition", "Edge cases"]
   },
-  { title: "[systems]", tone: "green", skills: ["Design Systems", "A11y", "Performance"] },
+  {
+    title: "[systems]",
+    tone: "green",
+    skills: ["Design Systems", "A11y", "Performance"]
+  },
   {
     title: "[ai / dx]",
     tone: "pink",
-    skills: ["Cursor", "Agent docs", "Workflows", "Quality gates"],
-  },
+    skills: ["Cursor", "Agent docs", "Workflows", "Quality gates"]
+  }
 ] as const;
 
 const links = [
   { label: "Email", href: "mailto:asalisinasa@gmail.com", kind: "primary" },
   { label: "LinkedIn", href: "#linkedin", kind: "social" },
-  { label: "GitHub", href: "https://github.com/asalisinasa", kind: "social" },
+  { label: "GitHub", href: "https://github.com/asalisinasa", kind: "social" }
 ] as const;
 
 async function seed() {
@@ -67,7 +75,7 @@ async function seed() {
   if (!token) {
     throw new Error(
       "SANITY_API_WRITE_TOKEN is missing. Create a token with Editor access at\n" +
-        `https://sanity.io/manage/project/${projectId}/api#tokens and export it in your shell.`,
+        `https://sanity.io/manage/project/${projectId}/api#tokens and export it in your shell.`
     );
   }
 
@@ -76,7 +84,7 @@ async function seed() {
     dataset,
     apiVersion,
     token,
-    useCdn: false,
+    useCdn: false
   });
 
   await client.createOrReplace({
@@ -84,7 +92,7 @@ async function seed() {
     _type: "siteSettings",
     name: "asalisinasa",
     title: "asalisinasa — Frontend Engineer",
-    description: "",
+    description: ""
   });
 
   const projectRefs = await Promise.all(
@@ -96,10 +104,10 @@ async function seed() {
         title: p.title,
         description: p.description,
         tags: [...p.tags],
-        accentTags: [...p.accentTags],
+        accentTags: [...p.accentTags]
       });
       return { _type: "reference" as const, _ref: created._id, _key: p.slug };
-    }),
+    })
   );
 
   await client.createOrReplace({
@@ -109,7 +117,7 @@ async function seed() {
     currentFocus: "Product-minded frontend roles with AI-assisted workflows",
     status: "open to remote product / startup opportunities",
     links: links.map((l) => ({ ...l, _key: key("link") })),
-    featuredProjects: projectRefs,
+    featuredProjects: projectRefs
   });
 
   await client.createOrReplace({
@@ -119,7 +127,7 @@ async function seed() {
     title: "whoami",
     ariaLabel: "About me",
     name: "I'm asalisinasa",
-    role: "Frontend Engineer",
+    role: "Frontend Engineer"
   });
 
   await client.createOrReplace({
@@ -131,8 +139,8 @@ async function seed() {
     groups: skillGroups.map((g) => ({
       ...g,
       skills: [...g.skills],
-      _key: key("group"),
-    })),
+      _key: key("group")
+    }))
   });
 
   await client.createOrReplace({
@@ -143,20 +151,20 @@ async function seed() {
       {
         _type: "whoamiSection",
         _ref: "whoamiSection",
-        _key: key("section"),
+        _key: key("section")
       },
       {
         _type: "tagGroupsSection",
         _ref: "tagGroupsSection",
-        _key: key("section"),
-      },
-    ],
+        _key: key("section")
+      }
+    ]
   });
 
   console.log(
     "Seeded siteSettings, pageHome, profile, whoamiSection, tagGroupsSection, and",
     projects.length,
-    "projects",
+    "projects"
   );
 }
 

@@ -43,7 +43,10 @@
     /* Effects */
     --focus-ring: light-dark(#b56f00, #e8c876);
     --shadow-color: light-dark(rgb(39 50 71 / 10%), rgb(0 0 0 / 35%));
-    --shadow-card-hover-color: light-dark(rgb(143 111 150 / 10%), rgb(0 0 0 / 28%));
+    --shadow-card-hover-color: light-dark(
+      rgb(143 111 150 / 10%),
+      rgb(0 0 0 / 28%)
+    );
 
     /* Theme control */
     --theme-control-bg: light-dark(rgb(255 255 255 / 56%), rgb(21 24 39 / 72%));

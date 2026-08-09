@@ -4,12 +4,14 @@ import { TerminalSection } from "@/ui/terminal-section";
 import styles from "./work-section.module.css";
 
 function projectSlug(project: Project): string {
-  return typeof project.slug === "string" ? project.slug : (project.slug?.current ?? "");
+  return typeof project.slug === "string"
+    ? project.slug
+    : (project.slug?.current ?? "");
 }
 
 export function WorkSection({
   title = "ls ~/selected-work/",
-  projects,
+  projects
 }: {
   title?: string;
   projects: Project[];
@@ -19,7 +21,11 @@ export function WorkSection({
       <ul className={styles.grid}>
         {projects.map((project) => (
           <li key={project.title}>
-            <a className={styles.card} href={`#${projectSlug(project)}`} aria-label={project.title}>
+            <a
+              className={styles.card}
+              href={`#${projectSlug(project)}`}
+              aria-label={project.title}
+            >
               <div>
                 <h3 className={styles.cardTitle}>[{projectSlug(project)}]</h3>
                 <p className={styles.cardDesc}>{project.description}</p>

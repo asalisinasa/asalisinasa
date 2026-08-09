@@ -1,7 +1,7 @@
 "use client";
 
-import { FC } from "react";
 import cn from "classnames";
+import { FC } from "react";
 
 import { ContainerProps } from "./container.types";
 

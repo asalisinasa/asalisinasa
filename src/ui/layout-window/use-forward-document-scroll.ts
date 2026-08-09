@@ -6,7 +6,11 @@ function isNodeInside(container: Element, target: EventTarget | null): boolean {
   return target instanceof Node && container.contains(target);
 }
 
-function normalizeWheelDelta(deltaY: number, deltaMode: number, pageHeight: number): number {
+function normalizeWheelDelta(
+  deltaY: number,
+  deltaMode: number,
+  pageHeight: number
+): number {
   switch (deltaMode) {
     case WheelEvent.DOM_DELTA_LINE:
       return deltaY * 16;
@@ -18,11 +22,13 @@ function normalizeWheelDelta(deltaY: number, deltaMode: number, pageHeight: numb
 }
 
 /**
- * Forwards document-level wheel and touch gestures into `scrollerRef`
- * when the gesture starts outside that element (e.g. page margins).
- * Native scrolling inside the scroller is left untouched.
+ * Forwards document-level wheel and touch gestures into `scrollerRef` when the
+ * gesture starts outside that element (e.g. page margins). Native scrolling
+ * inside the scroller is left untouched.
  */
-export function useForwardDocumentScroll(scrollerRef: RefObject<HTMLElement | null>): void {
+export function useForwardDocumentScroll(
+  scrollerRef: RefObject<HTMLElement | null>
+): void {
   const touchActiveRef = useRef(false);
   const lastTouchYRef = useRef(0);
 
@@ -39,7 +45,7 @@ export function useForwardDocumentScroll(scrollerRef: RefObject<HTMLElement | nu
       scroller.scrollTop += normalizeWheelDelta(
         event.deltaY,
         event.deltaMode,
-        scroller.clientHeight,
+        scroller.clientHeight
       );
     };
 

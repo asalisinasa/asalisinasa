@@ -6,5 +6,5 @@ export const sanityClient = createClient({
   projectId: sanityProjectId,
   dataset: sanityDataset,
   apiVersion: sanityApiVersion,
-  useCdn: false,
+  useCdn: false
 });

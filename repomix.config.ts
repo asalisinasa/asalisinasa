@@ -3,7 +3,7 @@ import { defineConfig } from "repomix";
 export default defineConfig({
   $schema: "https://repomix.com/schemas/latest/schema.json",
   input: {
-    maxFileSize: 5242880,
+    maxFileSize: 5242880
   },
   output: {
     filePath: ".repomix/repomix-output.xml",
@@ -27,8 +27,8 @@ export default defineConfig({
       sortByChangesMaxCommits: 100,
       includeDiffs: false,
       includeLogs: false,
-      includeLogsCount: 50,
-    },
+      includeLogsCount: 50
+    }
   },
   include: [],
   ignore: {
@@ -56,13 +56,13 @@ export default defineConfig({
       "**/*.jpeg",
       "**/*.gif",
       "**/*.webp",
-      "**/*.ico",
-    ],
+      "**/*.ico"
+    ]
   },
   security: {
-    enableSecurityCheck: true,
+    enableSecurityCheck: true
   },
   tokenCount: {
-    encoding: "o200k_base",
-  },
+    encoding: "o200k_base"
+  }
 });

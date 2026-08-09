@@ -1,7 +1,7 @@
 "use client";
 
-import type { ReactNode } from "react";
 import { useDraftModeEnvironment } from "next-sanity/hooks";
+import type { ReactNode } from "react";
 
 import styles from "./disable-draft-mode.module.css";
 

@@ -3,6 +3,7 @@
 import { type ReactNode, useRef } from "react";
 
 import { useForwardDocumentScroll } from "./use-forward-document-scroll";
+
 import styles from "./layout-window.module.css";
 
 export function MainWindow({ children }: { children: ReactNode }) {

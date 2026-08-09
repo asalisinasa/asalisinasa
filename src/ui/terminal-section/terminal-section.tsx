@@ -13,7 +13,7 @@ export function TerminalSection({
   title,
   ariaLabel,
   children,
-  isHero = false,
+  isHero = false
 }: TerminalSectionProps) {
   const TitleElement = isHero ? "h1" : "h2";
 

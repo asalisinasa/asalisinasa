@@ -5,7 +5,8 @@
 .command {
   margin: 0 0 var(--spacing-small);
   color: var(--green);
-  font: var(--font-weight-bold) var(--font-size-command) / var(--line-height-tight) var(--mono);
+  font: var(--font-weight-bold) var(--font-size-command) /
+    var(--line-height-tight) var(--mono);
 }
 
 .line {

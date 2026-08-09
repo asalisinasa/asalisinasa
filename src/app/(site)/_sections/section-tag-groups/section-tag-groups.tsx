@@ -1,16 +1,22 @@
 import type { SkillGroup } from "@/sanity/types";
-import { TerminalSection, type TerminalSectionProps } from "@/ui/terminal-section";
+import {
+  TerminalSection,
+  type TerminalSectionProps
+} from "@/ui/terminal-section";
 
 import styles from "./section-tag-groups.module.css";
 
-export interface SectionTagGroupsProps extends Omit<TerminalSectionProps, "children"> {
+export interface SectionTagGroupsProps extends Omit<
+  TerminalSectionProps,
+  "children"
+> {
   groups: SkillGroup[];
 }
 
 export function SectionTagGroups({
   title = "ls ~/skills/",
   ariaLabel = "Skills section",
-  groups,
+  groups
 }: SectionTagGroupsProps) {
   return (
     <TerminalSection title={title} ariaLabel={ariaLabel}>
@@ -22,7 +28,11 @@ export function SectionTagGroups({
               {group.skills?.map((skill) => (
                 <li
                   key={skill}
-                  className={group.tone === "pink" ? `${styles.tag} ${styles.tagPink}` : styles.tag}
+                  className={
+                    group.tone === "pink"
+                      ? `${styles.tag} ${styles.tagPink}`
+                      : styles.tag
+                  }
                 >
                   {skill}
                 </li>

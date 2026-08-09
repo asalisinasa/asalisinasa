@@ -1,7 +1,14 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { createContext, use, useCallback, useEffect, useMemo, useState } from "react";
+import {
+  createContext,
+  use,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState
+} from "react";
 
 import {
   isThemePreference,
@@ -11,7 +18,7 @@ import {
   THEME_STORAGE_KEY,
   type ResolvedTheme,
   type ThemeContextValue,
-  type ThemePreference,
+  type ThemePreference
 } from "./theme";
 import { ThemeScript } from "./theme-script";
 
@@ -44,7 +51,7 @@ function applyTheme(theme: ResolvedTheme): void {
   root.style.colorScheme = theme;
 
   let themeColor = document.querySelector<HTMLMetaElement>(
-    'meta[name="theme-color"][data-theme-managed="true"]',
+    'meta[name="theme-color"][data-theme-managed="true"]'
   );
 
   if (!themeColor) {
@@ -78,7 +85,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     };
 
     mediaQuery.addEventListener("change", handleSystemThemeChange);
-    return () => mediaQuery.removeEventListener("change", handleSystemThemeChange);
+    return () =>
+      mediaQuery.removeEventListener("change", handleSystemThemeChange);
   }, []);
 
   useEffect(() => {
@@ -87,7 +95,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         return;
       }
 
-      setPreferenceState(isThemePreference(event.newValue) ? event.newValue : "system");
+      setPreferenceState(
+        isThemePreference(event.newValue) ? event.newValue : "system"
+      );
     };
 
     window.addEventListener("storage", handleStorageChange);
@@ -110,9 +120,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     () => ({
       state: { preference, resolvedTheme },
       actions: { setPreference },
-      meta: { mounted, systemTheme },
+      meta: { mounted, systemTheme }
     }),
-    [mounted, preference, resolvedTheme, setPreference, systemTheme],
+    [mounted, preference, resolvedTheme, setPreference, systemTheme]
   );
 
   return (

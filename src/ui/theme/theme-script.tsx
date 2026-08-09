@@ -3,13 +3,13 @@ import {
   THEME_MEDIA_QUERY,
   THEME_STORAGE_KEY,
   type ResolvedTheme,
-  type ThemePreference,
+  type ThemePreference
 } from "./theme";
 
 function themeScript(
   storageKey: string,
   mediaQuery: string,
-  themeColors: Record<ResolvedTheme, string>,
+  themeColors: Record<ResolvedTheme, string>
 ) {
   let preference: ThemePreference = "system";
 
@@ -20,7 +20,9 @@ function themeScript(
     }
   } catch {}
 
-  const systemTheme: ResolvedTheme = window.matchMedia(mediaQuery).matches ? "dark" : "light";
+  const systemTheme: ResolvedTheme = window.matchMedia(mediaQuery).matches
+    ? "dark"
+    : "light";
   const resolvedTheme = preference === "system" ? systemTheme : preference;
   const root = document.documentElement;
 
@@ -38,7 +40,7 @@ function themeScript(
 const themeScriptArguments = JSON.stringify([
   THEME_STORAGE_KEY,
   THEME_MEDIA_QUERY,
-  THEME_COLORS,
+  THEME_COLORS
 ]).slice(1, -1);
 
 export function ThemeScript() {
@@ -46,7 +48,7 @@ export function ThemeScript() {
     <script
       suppressHydrationWarning
       dangerouslySetInnerHTML={{
-        __html: `(${themeScript.toString()})(${themeScriptArguments})`,
+        __html: `(${themeScript.toString()})(${themeScriptArguments})`
       }}
     />
   );

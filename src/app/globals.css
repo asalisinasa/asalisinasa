@@ -47,8 +47,17 @@
     min-width: var(--page-min-width);
     min-height: 100vh;
     background:
-      radial-gradient(circle at 18% 12%, var(--page-glow-pink), transparent 30rem),
-      radial-gradient(circle at 86% 18%, var(--page-glow-green), transparent 30rem), var(--bg);
+      radial-gradient(
+        circle at 18% 12%,
+        var(--page-glow-pink),
+        transparent 30rem
+      ),
+      radial-gradient(
+        circle at 86% 18%,
+        var(--page-glow-green),
+        transparent 30rem
+      ),
+      var(--bg);
     color: var(--text);
     font-family: var(--sans);
     line-height: var(--line-height-body);
@@ -57,32 +66,68 @@
   @media (min-width: 1124px) {
     body {
       background:
-        radial-gradient(circle at 18% 12%, var(--page-glow-pink), transparent 45rem),
-        radial-gradient(circle at 86% 18%, var(--page-glow-green), transparent 45rem), var(--bg);
+        radial-gradient(
+          circle at 18% 12%,
+          var(--page-glow-pink),
+          transparent 45rem
+        ),
+        radial-gradient(
+          circle at 86% 18%,
+          var(--page-glow-green),
+          transparent 45rem
+        ),
+        var(--bg);
     }
   }
 
   @media (min-width: 1440px) {
     body {
       background:
-        radial-gradient(circle at 18% 12%, var(--page-glow-pink), transparent 60rem),
-        radial-gradient(circle at 86% 18%, var(--page-glow-green), transparent 60rem), var(--bg);
+        radial-gradient(
+          circle at 18% 12%,
+          var(--page-glow-pink),
+          transparent 60rem
+        ),
+        radial-gradient(
+          circle at 86% 18%,
+          var(--page-glow-green),
+          transparent 60rem
+        ),
+        var(--bg);
     }
   }
 
   @media (min-width: 1920px) {
     body {
       background:
-        radial-gradient(circle at 18% 12%, var(--page-glow-pink), transparent 75rem),
-        radial-gradient(circle at 86% 18%, var(--page-glow-green), transparent 75rem), var(--bg);
+        radial-gradient(
+          circle at 18% 12%,
+          var(--page-glow-pink),
+          transparent 75rem
+        ),
+        radial-gradient(
+          circle at 86% 18%,
+          var(--page-glow-green),
+          transparent 75rem
+        ),
+        var(--bg);
     }
   }
 
   @media (min-width: 2560px) {
     body {
       background:
-        radial-gradient(circle at 18% 12%, var(--page-glow-pink), transparent 90rem),
-        radial-gradient(circle at 86% 18%, var(--page-glow-green), transparent 90rem), var(--bg);
+        radial-gradient(
+          circle at 18% 12%,
+          var(--page-glow-pink),
+          transparent 90rem
+        ),
+        radial-gradient(
+          circle at 86% 18%,
+          var(--page-glow-green),
+          transparent 90rem
+        ),
+        var(--bg);
     }
   }
 

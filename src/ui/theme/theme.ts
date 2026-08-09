@@ -7,7 +7,7 @@ export type ResolvedTheme = Exclude<ThemePreference, "system">;
 
 export const THEME_COLORS: Record<ResolvedTheme, string> = {
   light: "#fdfbff",
-  dark: "#151827",
+  dark: "#151827"
 };
 
 export interface ThemeContextValue {
@@ -25,12 +25,15 @@ export interface ThemeContextValue {
 }
 
 export function isThemePreference(value: unknown): value is ThemePreference {
-  return typeof value === "string" && THEME_PREFERENCES.some((theme) => theme === value);
+  return (
+    typeof value === "string" &&
+    THEME_PREFERENCES.some((theme) => theme === value)
+  );
 }
 
 export function resolveTheme(
   preference: ThemePreference,
-  systemTheme: ResolvedTheme,
+  systemTheme: ResolvedTheme
 ): ResolvedTheme {
   return preference === "system" ? systemTheme : preference;
 }

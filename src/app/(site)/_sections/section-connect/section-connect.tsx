@@ -37,7 +37,11 @@ export function SectionConnect({ links }: { links: ProfileLink[] }) {
     <TerminalSection title="connect --list" ariaLabel="Connect section">
       <ol className={styles.list} aria-label="Contact links">
         {links.map((link, index) => (
-          <li key={link.href} className={styles.entry} style={{ "--i": index } as CSSProperties}>
+          <li
+            key={link.href}
+            className={styles.entry}
+            style={{ "--i": index } as CSSProperties}
+          >
             <a
               href={link.href}
               className={styles.link}

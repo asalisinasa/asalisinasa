@@ -16,7 +16,8 @@
   background: var(--overlay-bg);
   box-shadow: var(--shadow);
   color: var(--text-strong);
-  font: var(--font-weight-semibold) var(--font-size-x-small) / var(--line-height-tight) var(--mono);
+  font: var(--font-weight-semibold) var(--font-size-x-small) /
+    var(--line-height-tight) var(--mono);
   cursor: pointer;
   backdrop-filter: blur(var(--spacing-x-small));
   transition:
