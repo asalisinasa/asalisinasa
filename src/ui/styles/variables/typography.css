@@ -1,25 +1,24 @@
 @layer tokens {
-    :root {
-        /* Font families */
-        --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-        --sans:
-            Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-            sans-serif;
+  :root {
+    /* Font families */
+    --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    --sans:
+      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-        /* Font sizes */
-        --font-size-2x-small: 12px;
-        --font-size-x-small: 13px;
-        --font-size-small: 15px;
-        --font-size-medium: 17px;
-        --font-size-command: clamp(24px, 2vw, 32px);
-        --font-size-body: clamp(16px, 1.8vw, 20px);
+    /* Font sizes */
+    --font-size-2x-small: 12px;
+    --font-size-x-small: 13px;
+    --font-size-small: 15px;
+    --font-size-medium: 17px;
+    --font-size-command: clamp(24px, 2vw, 32px);
+    --font-size-body: clamp(16px, 1.8vw, 20px);
 
-        /* Line heights */
-        --line-height-tight: 1.2;
-        --line-height-body: 1.5;
+    /* Line heights */
+    --line-height-tight: 1.2;
+    --line-height-body: 1.5;
 
-        /* Font weights */
-        --font-weight-semibold: 600;
-        --font-weight-bold: 700;
-    }
+    /* Font weights */
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+  }
 }

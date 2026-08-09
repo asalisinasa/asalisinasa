@@ -1,100 +1,100 @@
 .layoutWindow {
-    --layout-window-bg: color-mix(in srgb, var(--terminal-bg) 92%, var(--surface-mix));
+  --layout-window-bg: color-mix(in srgb, var(--terminal-bg) 92%, var(--surface-mix));
 
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border: var(--border-width-small) solid var(--terminal-border);
-    border-radius: var(--radius);
-    background: var(--layout-window-bg);
-    box-shadow: var(--shadow);
-    margin: var(--spacing-x-small);
-    max-height: calc(100vh - var(--space-page));
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: var(--border-width-small) solid var(--terminal-border);
+  border-radius: var(--radius);
+  background: var(--layout-window-bg);
+  box-shadow: var(--shadow);
+  margin: var(--spacing-x-small);
+  max-height: calc(100vh - var(--space-page));
 
-    @media (--md) {
-        margin: var(--spacing-large);
-    }
+  @media (--md) {
+    margin: var(--spacing-large);
+  }
 
-    @media (--lg) {
-        margin: var(--spacing-x-large);
-    }
+  @media (--lg) {
+    margin: var(--spacing-x-large);
+  }
 
-    &::before {
-        content: "";
-        position: absolute;
-        inset-inline: 0;
-        right: 16px;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-        height: var(--spacing-7x-large);
-        pointer-events: none;
-        background: linear-gradient(to top, var(--layout-window-bg), transparent);
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    right: 16px;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: var(--spacing-7x-large);
+    pointer-events: none;
+    background: linear-gradient(to top, var(--layout-window-bg), transparent);
+  }
 }
 
 .bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: var(--size-bar-height);
-    min-height: var(--size-bar-height);
-    padding: 0 var(--spacing-2x-small) 0 var(--spacing-3x-large);
-    border-bottom: var(--border-width-small) solid var(--divider);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--size-bar-height);
+  min-height: var(--size-bar-height);
+  padding: 0 var(--spacing-2x-small) 0 var(--spacing-3x-large);
+  border-bottom: var(--border-width-small) solid var(--divider);
 }
 
 .dots {
-    display: flex;
-    gap: var(--spacing-small);
+  display: flex;
+  gap: var(--spacing-small);
 }
 
 .dot {
-    width: var(--size-dot);
-    height: var(--size-dot);
-    border-radius: var(--radius-round);
+  width: var(--size-dot);
+  height: var(--size-dot);
+  border-radius: var(--radius-round);
 }
 
 .dotPink {
-    background: var(--pink-soft);
+  background: var(--pink-soft);
 }
 
 .dotSand {
-    background: var(--sand);
+  background: var(--sand);
 }
 
 .dotGreen {
-    background: var(--green-soft);
+  background: var(--green-soft);
 }
 
 .body {
-    flex: 1;
-    min-height: 0;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    scrollbar-gutter: stable;
-    scrollbar-width: thin;
-    scrollbar-color: var(--divider) transparent;
-    padding: 0 var(--terminal-padding-inline);
-    font-family: var(--mono);
-    -webkit-overflow-scrolling: touch;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: var(--divider) transparent;
+  padding: 0 var(--terminal-padding-inline);
+  font-family: var(--mono);
+  -webkit-overflow-scrolling: touch;
 
-    &::-webkit-scrollbar {
-        width: var(--spacing-x-small);
-    }
+  &::-webkit-scrollbar {
+    width: var(--spacing-x-small);
+  }
 
-    &::-webkit-scrollbar-track {
-        background: transparent;
-    }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-    &::-webkit-scrollbar-thumb {
-        background: var(--divider);
-        border-radius: var(--radius-round);
-    }
+  &::-webkit-scrollbar-thumb {
+    background: var(--divider);
+    border-radius: var(--radius-round);
+  }
 }
 
 .footer {
-    flex-shrink: 0;
-    padding-bottom: var(--spacing-x-large);
-    font-family: var(--mono);
+  flex-shrink: 0;
+  padding-bottom: var(--spacing-x-large);
+  font-family: var(--mono);
 }
