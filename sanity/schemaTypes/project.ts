@@ -24,6 +24,7 @@ export const project = defineType({
             name: "description",
             title: "Description",
             type: "string",
+            description: "One-line summary shown under the heading",
             validation: (r) => r.required(),
         }),
         defineField({
@@ -48,5 +49,5 @@ export const project = defineType({
             description: "Main body content of the section",
         }),
     ],
-    preview: { select: { title: "title", subtitle: "slug" } },
+    preview: { select: { title: "title", subtitle: "slug.current" } },
 });

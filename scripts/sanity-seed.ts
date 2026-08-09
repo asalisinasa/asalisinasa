@@ -82,10 +82,9 @@ async function seed() {
     await client.createOrReplace({
         _id: "siteSettings",
         _type: "siteSettings",
-        name: "Alina Stepanova",
-        title: "Alina Stepanova — Senior Frontend Engineer",
-        description:
-            "Alina Stepanova — Senior Frontend Engineer, React/TypeScript/Next.js, AI-assisted workflows, design systems, accessibility and performance.",
+        name: "asalisinasa",
+        title: "asalisinasa — Frontend Engineer",
+        description: "",
     });
 
     const projectRefs = await Promise.all(
@@ -106,21 +105,59 @@ async function seed() {
     await client.createOrReplace({
         _id: "profile",
         _type: "profile",
-        name: "alina.stepanova",
-        role: "Senior Frontend Engineer",
-        uptime: "8 years building product-focused frontend systems",
+        uptime: "",
         currentFocus: "Product-minded frontend roles with AI-assisted workflows",
         status: "open to remote product / startup opportunities",
         links: links.map((l) => ({ ...l, _key: key("link") })),
-        skillGroups: skillGroups.map((g) => ({
+        featuredProjects: projectRefs,
+    });
+
+    await client.createOrReplace({
+        _id: "whoamiSection",
+        _type: "whoamiSection",
+        slug: { _type: "slug", current: "whoami" },
+        title: "whoami",
+        ariaLabel: "About me",
+        name: "I'm asalisinasa",
+        role: "Frontend Engineer",
+    });
+
+    await client.createOrReplace({
+        _id: "tagGroupsSection",
+        _type: "tagGroupsSection",
+        slug: { _type: "slug", current: "skills" },
+        title: "ls ~/skills/",
+        ariaLabel: "My skills",
+        groups: skillGroups.map((g) => ({
             ...g,
             skills: [...g.skills],
             _key: key("group"),
         })),
-        featuredProjects: projectRefs,
     });
 
-    console.log("Seeded siteSettings, profile, and", projects.length, "projects");
+    await client.createOrReplace({
+        _id: "pageHome",
+        _type: "pageHome",
+        title: "Home",
+        sections: [
+            {
+                _type: "whoamiSection",
+                _ref: "whoamiSection",
+                _key: key("section"),
+            },
+            {
+                _type: "tagGroupsSection",
+                _ref: "tagGroupsSection",
+                _key: key("section"),
+            },
+        ],
+    });
+
+    console.log(
+        "Seeded siteSettings, pageHome, profile, whoamiSection, tagGroupsSection, and",
+        projects.length,
+        "projects",
+    );
 }
 
 seed().catch((error: unknown) => {
