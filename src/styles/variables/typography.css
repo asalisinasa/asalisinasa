@@ -11,7 +11,7 @@
         --font-size-x-small: 13px;
         --font-size-small: 15px;
         --font-size-medium: 17px;
-        --font-size-command: clamp(18px, 2vw, 22px);
+        --font-size-command: clamp(24px, 2vw, 32px);
         --font-size-body: clamp(16px, 1.8vw, 20px);
 
         /* Line heights */

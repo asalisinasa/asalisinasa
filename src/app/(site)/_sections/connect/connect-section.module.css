@@ -1,32 +1,16 @@
-.section {
-    margin-block: 0 var(--spacing-4x-large);
-}
-
-.command {
-    margin: 0 0 var(--spacing-small);
-    color: var(--green);
-    font: var(--font-weight-bold) var(--font-size-command) / var(--line-height-tight) var(--mono);
-}
-
 .list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.entry {
-    /* display: grid;
-    grid-template-columns: var(--size-index) minmax(5.5rem, var(--size-label-max)) minmax(0, 1fr);
-    gap: var(--spacing-small);
-    align-items: baseline;
-    padding: var(--spacing-2x-small) 0;
-    animation: entry-in var(--animation-entry) both;
-    animation-delay: calc(var(--i, 0) * var(--animation-entry-stagger)); */
-}
-
 .idx {
     color: var(--muted);
     font-variant-numeric: tabular-nums;
+    margin-right: var(--spacing-x-small);
 }
 
 .name {
@@ -40,39 +24,32 @@
             var(--size-label-min),
             var(--size-label-max)
         ) minmax(0, 1fr);
-    gap: var(--spacing-small);
+    gap: var(--spacing-large);
     align-items: baseline;
     padding: var(--spacing-2x-small) 0;
+    text-underline-offset: 0.2em;
 
     @media (--md) {
-        grid-template-columns: var(--size-index) auto minmax(0, 1fr) auto;
-        padding: var(--spacing-medium) 0;
+        display: flex;
+        /* grid-template-columns: var(--size-index) auto minmax(0, 1fr) auto;
+        padding: var(--spacing-medium) 0; */
     }
 }
 
 .linkLabel {
-    display: block;
-    position: relative;
+    display: flex;
+    gap: var(--spacing-3x-small);
     color: var(--green);
+    text-decoration: underline;
     white-space: nowrap;
     transition:
         color var(--transition-fast),
         border-color var(--transition-fast);
 }
 
-.linkLabel::before {
-    content: "→ ";
-    color: var(--muted);
-}
-
 .link:hover .linkLabel,
 .link:focus-visible .linkLabel {
     color: var(--pink);
-    text-decoration: underline;
-
-    &::before {
-        color: var(--pink);
-    }
 }
 
 @keyframes entry-in {

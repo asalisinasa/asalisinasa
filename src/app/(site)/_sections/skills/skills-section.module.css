@@ -1,15 +1,16 @@
-.section {
-    margin-block: 0 var(--spacing-4x-large);
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
 }
 
-.command {
-    margin: 0 0 var(--spacing-small);
-    color: var(--green);
-    font: var(--font-weight-bold) var(--font-size-command) / var(--line-height-tight) var(--mono);
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
 }
 
 .label {
-    margin: var(--spacing-2x-large) 0 var(--spacing-small);
     color: var(--muted);
     font-size: var(--font-size-small);
 }
@@ -34,11 +35,11 @@
     white-space: nowrap;
 
     @media (--md) {
-        padding: var(--spacing-2x-small) var(--spacing-2x-large);
+        padding: var(--spacing-3x-small) var(--spacing-x-large);
     }
 }
 
 .tagPink {
     border-color: var(--pink-soft);
-    color: var(--pink);
+    color: var(--pink-dark);
 }

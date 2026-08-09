@@ -1,4 +1,5 @@
 import type { Project } from "@/sanity/types";
+import { TerminalSection } from "@/components/terminal-section";
 
 import styles from "./work-section.module.css";
 
@@ -6,42 +7,31 @@ function projectSlug(project: Project): string {
     return typeof project.slug === "string" ? project.slug : (project.slug?.current ?? "");
 }
 
-export function WorkSection({ projects }: { projects: Project[] }) {
+export function WorkSection({
+    title = "ls ~/selected-work/",
+    projects,
+}: {
+    title?: string;
+    projects: Project[];
+}) {
     return (
-        <section className={styles.section} aria-labelledby="selected-work">
-            <h2 className={styles.command} id="selected-work">
-                ▸ ls ~/selected-work/
-            </h2>
-
-            <div className={styles.grid}>
+        <TerminalSection title={title} ariaLabel="Selected work">
+            <ul className={styles.grid}>
                 {projects.map((project) => (
-                    <a
-                        key={project.title}
-                        className={styles.card}
-                        href={`#${projectSlug(project)}`}
-                    >
-                        <div>
-                            <h3 className={styles.cardTitle}>[{project.title}]</h3>
-                            <p className={styles.cardDesc}>{project.description}</p>
-                        </div>
-                        <div className={styles.miniTags} aria-hidden="true">
-                            {project.tags?.map((tag) => (
-                                <span key={tag} className={styles.miniTag}>
-                                    {tag}
-                                </span>
-                            ))}
-                            {project.accentTags?.map((tag) => (
-                                <span
-                                    key={tag}
-                                    className={`${styles.miniTag} ${styles.miniTagPink}`}
-                                >
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
-                    </a>
+                    <li key={project.title}>
+                        <a
+                            className={styles.card}
+                            href={`#${projectSlug(project)}`}
+                            aria-label={project.title}
+                        >
+                            <div>
+                                <h3 className={styles.cardTitle}>[{projectSlug(project)}]</h3>
+                                <p className={styles.cardDesc}>{project.description}</p>
+                            </div>
+                        </a>
+                    </li>
                 ))}
-            </div>
-        </section>
+            </ul>
+        </TerminalSection>
     );
 }

@@ -1,5 +1,5 @@
 .section {
-    margin-block: 0 var(--spacing-4x-large);
+    padding: var(--spacing-4x-large) 0;
 }
 
 .command {

@@ -1,5 +1,5 @@
 .section {
-    margin-block: 0 var(--spacing-4x-large);
+    padding: var(--spacing-4x-large) 0;
 }
 
 .command {
@@ -15,6 +15,6 @@
 }
 
 .strong {
-    color: var(--text-strong);
+    color: var(--pink-dark);
     font-weight: var(--font-weight-bold);
 }
