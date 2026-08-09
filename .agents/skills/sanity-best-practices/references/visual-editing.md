@@ -119,7 +119,7 @@ Render `<VisualEditing />` in Draft Mode for click-to-edit overlays.
 // layout.tsx
 import { VisualEditing } from 'next-sanity/visual-editing'
 import { draftMode } from 'next/headers'
-import { DisableDraftMode } from '@/components/disable-draft-mode'
+import { DisableDraftMode } from '@/ui/disable-draft-mode'
 
 export default async function RootLayout({ children }) {
   return (
