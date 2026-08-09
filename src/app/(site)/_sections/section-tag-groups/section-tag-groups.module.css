@@ -29,7 +29,7 @@
     padding: var(--spacing-4x-small) var(--spacing-2x-small);
     border: var(--border-width-small) solid var(--green-border);
     border-radius: var(--radius-sm);
-    background: rgb(255 255 255 / 56%);
+    background: var(--tag-bg);
     color: var(--green);
     font-size: var(--font-size-small);
     white-space: nowrap;

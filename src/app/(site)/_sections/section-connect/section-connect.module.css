@@ -22,8 +22,10 @@
     --link-offset: var(--terminal-padding-inline);
 
     display: grid;
-    grid-template-columns: var(--size-index) minmax(var(--size-label-min),
-            var(--size-label-max)) minmax(0, 1fr);
+    grid-template-columns: var(--size-index) minmax(
+            var(--size-label-min),
+            var(--size-label-max)
+        ) minmax(0, 1fr);
     gap: var(--spacing-large);
     align-items: baseline;
     padding: var(--spacing-2x-small) 0;

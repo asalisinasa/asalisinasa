@@ -1,5 +1,5 @@
 .layoutWindow {
-    --layout-window-bg: color-mix(in srgb, var(--terminal-bg) 92%, white);
+    --layout-window-bg: color-mix(in srgb, var(--terminal-bg) 92%, var(--surface-mix));
 
     position: relative;
     display: flex;
@@ -37,11 +37,16 @@
 .bar {
     display: flex;
     align-items: center;
-    gap: var(--spacing-small);
+    justify-content: space-between;
     height: var(--size-bar-height);
     min-height: var(--size-bar-height);
-    padding: 0 var(--spacing-3x-large);
+    padding: 0 var(--spacing-2x-small) 0 var(--spacing-3x-large);
     border-bottom: var(--border-width-small) solid var(--divider);
+}
+
+.dots {
+    display: flex;
+    gap: var(--spacing-small);
 }
 
 .dot {
@@ -90,6 +95,6 @@
 
 .footer {
     flex-shrink: 0;
-    padding-bottom: var(--spacing-4x-large);
+    padding-bottom: var(--spacing-x-large);
     font-family: var(--mono);
 }

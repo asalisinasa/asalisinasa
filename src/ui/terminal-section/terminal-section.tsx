@@ -15,7 +15,7 @@ export function TerminalSection({
     children,
     isHero = false,
 }: TerminalSectionProps) {
-    const TitleElement = isHero ? 'h1' : 'h2';
+    const TitleElement = isHero ? "h1" : "h2";
 
     return (
         <section className={styles.section} aria-label={ariaLabel}>

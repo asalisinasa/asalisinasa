@@ -13,7 +13,7 @@
     padding: var(--spacing-x-small) var(--spacing-large);
     border: var(--border-width-small) solid var(--terminal-border);
     border-radius: var(--radius-sm);
-    background: rgb(255 255 255 / 92%);
+    background: var(--overlay-bg);
     box-shadow: var(--shadow);
     color: var(--text-strong);
     font: var(--font-weight-semibold) var(--font-size-x-small) / var(--line-height-tight)

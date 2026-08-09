@@ -16,7 +16,8 @@ export function SectionTerminalHero({
     return (
         <TerminalSection title={title} ariaLabel={ariaLabel} isHero>
             <p className={styles.line}>
-                <span className={styles.strong}>{name}</span> — {role}
+                <span className={styles.strong}>{name}</span> —{" "}
+                <span className={styles.role}>{role}</span>
             </p>
         </TerminalSection>
     );

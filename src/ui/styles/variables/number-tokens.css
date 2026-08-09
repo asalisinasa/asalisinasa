@@ -50,8 +50,9 @@
         --terminal-padding-inline: var(--spacing-x-large);
 
         /* Shadow */
-        --shadow: 0 var(--spacing-4x-large) 60px rgb(39 50 71 / 10%);
-        --shadow-card-hover: 0 var(--spacing-small) var(--spacing-4x-large) rgb(143 111 150 / 10%);
+        --shadow: 0 var(--spacing-4x-large) 60px var(--shadow-color);
+        --shadow-card-hover: 0 var(--spacing-small) var(--spacing-4x-large)
+            var(--shadow-card-hover-color);
 
         /* Motion */
         --transition-fast: 160ms ease;

@@ -4,6 +4,7 @@ import type { HomePage, HomePageSection } from "@/sanity/types";
 
 import { LayoutWindow } from "@/ui/layout-window";
 import { Container } from "@/ui/container";
+import { ThemeToggle } from "@/ui/theme";
 
 import { SectionConnect } from "./_sections/section-connect/section-connect";
 import { SectionTagGroups } from "./_sections/section-tag-groups/section-tag-groups";
@@ -57,7 +58,9 @@ export default async function Home() {
     return (
         <Container>
             <LayoutWindow>
-                <LayoutWindow.Header />
+                <LayoutWindow.Header>
+                    <ThemeToggle />
+                </LayoutWindow.Header>
                 <LayoutWindow.Main>
                     {sections.map((section) => renderHomeSection(section))}
 

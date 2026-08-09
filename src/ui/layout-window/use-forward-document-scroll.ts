@@ -36,7 +36,11 @@ export function useForwardDocumentScroll(scrollerRef: RefObject<HTMLElement | nu
             }
 
             event.preventDefault();
-            scroller.scrollTop += normalizeWheelDelta(event.deltaY, event.deltaMode, scroller.clientHeight);
+            scroller.scrollTop += normalizeWheelDelta(
+                event.deltaY,
+                event.deltaMode,
+                scroller.clientHeight,
+            );
         };
 
         const onTouchStart = (event: TouchEvent): void => {

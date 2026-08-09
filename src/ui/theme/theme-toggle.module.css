@@ -1,0 +1,103 @@
+.toggle {
+    display: flex;
+    gap: var(--spacing-4x-small);
+    margin: 0;
+    padding: var(--spacing-4x-small);
+    border: var(--border-width-small) solid var(--theme-control-border);
+    border-radius: var(--radius-round);
+    background: var(--theme-control-bg);
+}
+
+.legend {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.option {
+    position: relative;
+    display: grid;
+    width: 26px;
+    height: 26px;
+    place-items: center;
+}
+
+.input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.icon {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-round);
+    color: var(--theme-control-text);
+    place-items: center;
+    transition:
+        background var(--transition-fast),
+        color var(--transition-fast);
+}
+
+.icon svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5;
+}
+
+.option .input:not(:checked) + .icon {
+    cursor: pointer;
+}
+
+.input:checked + .icon {
+    background: var(--theme-control-active-bg);
+    color: var(--theme-control-active-text);
+}
+
+.option:hover .input[value="system"]:not(:checked):not(:disabled) + .icon {
+    @media (hover: hover) {
+        color: var(--pink-accent);
+    }
+
+    &:active {
+        color: var(--pink-accent);
+    }
+}
+
+.option:hover .input[value="light"]:not(:checked):not(:disabled) + .icon {
+    @media (hover: hover) {
+        color: var(--sand-accent);
+    }
+
+    &:active {
+        color: var(--sand-accent);
+    }
+}
+
+.option:hover .input[value="dark"]:not(:checked):not(:disabled) + .icon {
+    @media (hover: hover) {
+        color: var(--green-accent);
+    }
+
+    &:active {
+        color: var(--green-accent);
+    }
+}
+
+.input:focus-visible + .icon {
+    outline: var(--focus-ring-width) solid var(--focus-ring);
+    outline-offset: var(--border-width-small);
+}
+
+.input:disabled + .icon {
+    cursor: default;
+}
