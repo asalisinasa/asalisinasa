@@ -1,11 +1,11 @@
-/** @type {import('postcss-load-config').Config} */
+/** @type { import("postcss-load-config").Config } */
 const config = {
-    plugins: {
-        "@csstools/postcss-global-data": {
-            files: ["./src/ui/styles/variables/breakpoints.css"],
-        },
-        "postcss-custom-media": {},
+  plugins: {
+    "@csstools/postcss-global-data": {
+      files: ["./src/ui/styles/variables/breakpoints.css"]
     },
+    "postcss-custom-media": {}
+  }
 };
 
 export default config;

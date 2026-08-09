@@ -1,11 +1,11 @@
 @layer ui {
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: min(100%, var(--page-max-width) - var(--page-padding-block) * 2);
-        max-width: var(--page-max-width);
-        height: 100vh;
-        margin: 0 auto;
-    }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, var(--page-max-width) - var(--page-padding-block) * 2);
+    max-width: var(--page-max-width);
+    height: 100vh;
+    margin: 0 auto;
+  }
 }

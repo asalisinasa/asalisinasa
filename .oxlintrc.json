@@ -1,24 +1,24 @@
 {
-    "$schema": "./node_modules/oxlint/configuration_schema.json",
-    "plugins": ["react", "nextjs"],
-    "categories": {
-        "correctness": "warn",
-        "suspicious": "warn",
-        "perf": "warn"
-    },
-    "env": {
-        "browser": true,
-        "node": true
-    },
-    "settings": {
-        "react": {
-            "version": "19"
-        }
-    },
-    "rules": {
-        "react/react-in-jsx-scope": "off",
-        "react/jsx-max-depth": "off",
-        "no-underscore-dangle": "off"
-    },
-    "ignorePatterns": [".next", "out", "dist", "node_modules", "sanity"]
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "nextjs"],
+  "categories": {
+    "correctness": "warn",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "19"
+    }
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-max-depth": "off",
+    "no-underscore-dangle": "off"
+  },
+  "ignorePatterns": [".next", "out", "dist", "node_modules", "sanity"]
 }

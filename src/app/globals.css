@@ -3,72 +3,148 @@
 @layer reset, base, utilities;
 
 @layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-    }
+  html {
+    scroll-behavior: smooth;
+  }
 
-    html {
-        scroll-behavior: smooth;
-    }
+  body,
+  h1,
+  h2,
+  h3,
+  p,
+  ul {
+    margin: 0;
+  }
 
-    body,
-    h1,
-    h2,
-    h3,
-    p,
-    ul {
-        margin: 0;
-    }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 
-    ul {
-        list-style: none;
-        padding: 0;
-    }
+  img,
+  picture,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
 
-    img,
-    picture,
-    svg {
-        display: block;
-        max-width: 100%;
-    }
-
-    button,
-    input,
-    textarea,
-    select {
-        font: inherit;
-    }
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
 }
 
 @layer base {
+  body {
+    min-width: var(--page-min-width);
+    min-height: 100vh;
+    background:
+      radial-gradient(
+        circle at 18% 12%,
+        var(--page-glow-pink),
+        transparent 30rem
+      ),
+      radial-gradient(
+        circle at 86% 18%,
+        var(--page-glow-green),
+        transparent 30rem
+      ),
+      var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: var(--line-height-body);
+  }
+
+  @media (min-width: 1124px) {
     body {
-        min-width: var(--page-min-width);
-        min-height: 100vh;
-        background:
-            radial-gradient(circle at 18% 12%, rgb(226 206 233 / 36%), transparent 26rem),
-            radial-gradient(circle at 86% 18%, rgb(206 233 212 / 42%), transparent 24rem), var(--bg);
-        color: var(--text);
-        font-family: var(--sans);
-        line-height: var(--line-height-body);
+      background:
+        radial-gradient(
+          circle at 18% 12%,
+          var(--page-glow-pink),
+          transparent 45rem
+        ),
+        radial-gradient(
+          circle at 86% 18%,
+          var(--page-glow-green),
+          transparent 45rem
+        ),
+        var(--bg);
     }
+  }
 
-    a {
-        color: inherit;
-        text-decoration: none;
+  @media (min-width: 1440px) {
+    body {
+      background:
+        radial-gradient(
+          circle at 18% 12%,
+          var(--page-glow-pink),
+          transparent 60rem
+        ),
+        radial-gradient(
+          circle at 86% 18%,
+          var(--page-glow-green),
+          transparent 60rem
+        ),
+        var(--bg);
     }
+  }
 
-    a:focus-visible,
-    button:focus-visible {
-        border-radius: var(--radius-sm);
-        outline: none;
-        box-shadow: 0 0 0 var(--focus-ring-width) color-mix(in srgb, var(--sand-border), transparent 50%);
+  @media (min-width: 1920px) {
+    body {
+      background:
+        radial-gradient(
+          circle at 18% 12%,
+          var(--page-glow-pink),
+          transparent 75rem
+        ),
+        radial-gradient(
+          circle at 86% 18%,
+          var(--page-glow-green),
+          transparent 75rem
+        ),
+        var(--bg);
     }
+  }
 
-    ::selection {
-        background: var(--sand-soft);
-        color: var(--text-strong);
+  @media (min-width: 2560px) {
+    body {
+      background:
+        radial-gradient(
+          circle at 18% 12%,
+          var(--page-glow-pink),
+          transparent 90rem
+        ),
+        radial-gradient(
+          circle at 86% 18%,
+          var(--page-glow-green),
+          transparent 90rem
+        ),
+        var(--bg);
     }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    border-radius: var(--radius-sm);
+    outline: none;
+    box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring);
+  }
+
+  ::selection {
+    background: var(--sand-soft);
+    color: var(--text-strong);
+  }
 }

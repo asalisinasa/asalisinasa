@@ -1,86 +1,88 @@
 .list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .idx {
-    color: var(--muted);
-    font-variant-numeric: tabular-nums;
-    margin-right: var(--spacing-x-small);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  margin-right: var(--spacing-x-small);
 }
 
 .name {
-    color: var(--text-strong);
-    font-weight: var(--font-weight-bold);
+  color: var(--text-strong);
+  font-weight: var(--font-weight-bold);
 }
 
 .link {
+  --link-offset: var(--terminal-padding-inline);
+
+  display: grid;
+  grid-template-columns: var(--size-index) minmax(
+      var(--size-label-min),
+      var(--size-label-max)
+    ) minmax(0, 1fr);
+  gap: var(--spacing-large);
+  align-items: baseline;
+  padding: var(--spacing-2x-small) 0;
+  text-underline-offset: 0.2em;
+  width: calc(100% + var(--link-offset) * 2);
+  margin-left: calc(-1 * var(--link-offset));
+  padding-left: var(--link-offset);
+  padding-right: var(--link-offset);
+
+  @media (--md) {
     --link-offset: var(--terminal-padding-inline);
 
-    display: grid;
-    grid-template-columns: var(--size-index) minmax(var(--size-label-min),
-            var(--size-label-max)) minmax(0, 1fr);
-    gap: var(--spacing-large);
-    align-items: baseline;
-    padding: var(--spacing-2x-small) 0;
-    text-underline-offset: 0.2em;
-    width: calc(100% + var(--link-offset) * 2);
-    margin-left: calc(-1 * var(--link-offset));
-    padding-left: var(--link-offset);
-    padding-right: var(--link-offset);
-
-    @media (--md) {
-        --link-offset: var(--terminal-padding-inline);
-
-        display: flex;
-    }
+    display: flex;
+  }
 }
 
 .linkLabel {
-    display: flex;
-    gap: var(--spacing-3x-small);
-    color: var(--green);
-    text-decoration: underline;
-    white-space: nowrap;
-    transition:
-        color var(--transition-fast),
-        border-color var(--transition-fast);
+  display: flex;
+  gap: var(--spacing-3x-small);
+  color: var(--green);
+  text-decoration: underline;
+  white-space: nowrap;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
 
-    svg {
-        min-width: 24px;
-    }
+  svg {
+    min-width: 24px;
+  }
 }
 
 .link:hover .linkLabel,
 .link:focus-visible .linkLabel {
-    color: var(--pink);
+  color: var(--pink);
 }
 
 @keyframes entry-in {
-    from {
-        opacity: 0;
-        transform: translateX(var(--animation-entry-offset));
-    }
+  from {
+    opacity: 0;
+    transform: translateX(var(--animation-entry-offset));
+  }
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media (--sm) {
-    .link {
-        grid-template-columns: var(--size-index-sm) minmax(0, 1fr);
-        gap: var(--spacing-2x-small) var(--spacing-small);
-    }
+  .link {
+    grid-template-columns: var(--size-index-sm) minmax(0, 1fr);
+    gap: var(--spacing-2x-small) var(--spacing-small);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .entry {
-        animation: none;
-    }
+  .entry {
+    animation: none;
+  }
 }

@@ -1,31 +1,66 @@
 @layer tokens {
-    :root {
-        /* Surfaces */
-        --bg: #fdfbff;
-        --terminal-bg: #fcfbff;
-        --terminal-border: #d7ddec;
-        --divider: #e3e7f1;
-        --card-bg: #ffffff;
+  :root {
+    color-scheme: light dark;
 
-        /* Text */
-        --text: #4a556d;
-        --text-strong: #273247;
-        --muted: #7f8699;
+    /* Surfaces */
+    --bg: light-dark(#e3e7f1, #151827);
+    --terminal-bg: light-dark(#fcfbff, #1c2032);
+    --terminal-border: light-dark(#d7ddec, #343b54);
+    --divider: light-dark(#e3e7f1, #2a3046);
+    --card-bg: light-dark(#ffffff, #23283b);
+    --surface-mix: light-dark(#ffffff, #151827);
+    --tag-bg: light-dark(rgb(255 255 255 / 56%), rgb(35 40 59 / 78%));
+    --overlay-bg: light-dark(rgb(255 255 255 / 92%), rgb(28 32 50 / 92%));
+    --page-glow-pink: light-dark(rgb(226 206 233 / 36%), rgb(114 81 124 / 28%));
+    --page-glow-green: light-dark(rgb(206 233 212 / 42%), rgb(79 122 95 / 25%));
 
-        /* Green */
-        --green: #6f9278;
-        --green-soft: #cee9d4;
-        --green-border: #a8cdb5;
+    /* Text */
+    --text: light-dark(#4a556d, #c9cfde);
+    --text-strong: light-dark(#273247, #f3f1f8);
+    --muted: light-dark(#697286, #969fb4);
 
-        /* Pink */
-        --pink: #8f6f96;
-        --pink-dark: #7e478a;
-        --pink-soft: #e2cee9;
-        --pink-border: #e2cee9;
+    /* Green */
+    --green: light-dark(#587662, #9fc5aa);
+    --green-accent: light-dark(#8db097, #9fc5aa);
+    --green-dark: light-dark(#3f5a48, #b5d4be);
+    --green-soft: light-dark(#cee9d4, #294838);
+    --green-border: light-dark(#a8cdb5, #4f7a5f);
 
-        /* Sand */
-        --sand: #ffe6a0;
-        --sand-soft: #fff3d9;
-        --sand-border: #efa51d;
-    }
+    /* Pink */
+    --pink: light-dark(#806586, #c9a2d0);
+    --pink-accent: light-dark(#be8fc6, #d8ade0);
+    --pink-dark: light-dark(#7e478a, #d8ade0);
+    --pink-soft: light-dark(#e2cee9, #49324f);
+    --pink-border: light-dark(#e2cee9, #72517c);
+
+    /* Sand */
+    --sand: light-dark(#ffe6a0, #4b3f24);
+    --sand-accent: light-dark(#efa51d, #ffe6a0);
+    --sand-dark: light-dark(#b88430, #e8c876);
+    --sand-soft: light-dark(#ffe6a0, #e8c876);
+    --sand-border: light-dark(#efa51d, #b88430);
+
+    /* Effects */
+    --focus-ring: light-dark(#b56f00, #e8c876);
+    --shadow-color: light-dark(rgb(39 50 71 / 10%), rgb(0 0 0 / 35%));
+    --shadow-card-hover-color: light-dark(
+      rgb(143 111 150 / 10%),
+      rgb(0 0 0 / 28%)
+    );
+
+    /* Theme control */
+    --theme-control-bg: light-dark(rgb(255 255 255 / 56%), rgb(21 24 39 / 72%));
+    --theme-control-border: var(--terminal-border);
+    --theme-control-text: var(--muted);
+    --theme-control-active-bg: light-dark(#e3e7f1, #343b54);
+    --theme-control-active-text: var(--text-strong);
+  }
+
+  :root[data-theme="light"] {
+    color-scheme: light;
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+  }
 }

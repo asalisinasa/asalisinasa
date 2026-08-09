@@ -1,16 +1,28 @@
 {
-    "$schema": "./node_modules/oxfmt/configuration_schema.json",
-    "printWidth": 100,
-    "semi": true,
-    "singleQuote": false,
-    "trailingComma": "all",
-    "ignorePatterns": [
-        ".agents/**",
-        ".repomix/**",
-        "output/**",
-        ".next/**",
-        "node_modules/**",
-        "package-lock.json",
-        "sanity/**",
-    ],
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "endOfLine": "lf",
+  "semi": true,
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "trailingComma": "none",
+  "quoteProps": "as-needed",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "arrowParens": "always",
+  "sortImports": true,
+  "jsdoc": {
+    "bracketSpacing": true
+  },
+  "ignorePatterns": [
+    ".agents/**",
+    ".repomix/**",
+    "output/**",
+    ".next/**",
+    "node_modules/**",
+    "package-lock.json",
+    "sanity/**"
+  ]
 }

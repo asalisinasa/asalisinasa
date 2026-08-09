@@ -1,15 +1,16 @@
 .section {
-    padding: var(--spacing-4x-large) 0;
+  padding: var(--spacing-4x-large) 0;
 }
 
 .command {
-    margin: 0 0 var(--spacing-small);
-    color: var(--green);
-    font: var(--font-weight-bold) var(--font-size-command) / var(--line-height-tight) var(--mono);
+  margin: 0 0 var(--spacing-small);
+  color: var(--green);
+  font: var(--font-weight-bold) var(--font-size-command) /
+    var(--line-height-tight) var(--mono);
 }
 
 .line {
-    margin: 0;
-    color: var(--text);
-    font-size: var(--font-size-body);
+  margin: 0;
+  color: var(--text);
+  font-size: var(--font-size-body);
 }

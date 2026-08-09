@@ -1,75 +1,76 @@
 @layer tokens {
+  :root {
+    /* Radius */
+    --radius-none: 0;
+    --radius-sm: 7px;
+    --radius-card: 9px;
+    --radius: 14px;
+    --radius-round: 999px;
+
+    /* Spacing */
+    --spacing-none: 0;
+    --spacing-4x-small: 2px;
+    --spacing-3x-small: 4px;
+    --spacing-2x-small: 6px;
+    --spacing-x-small: 8px;
+    --spacing-small: 10px;
+    --spacing-medium: 12px;
+    --spacing-large: 14px;
+    --spacing-x-large: 16px;
+    --spacing-2x-large: 18px;
+    --spacing-3x-large: 20px;
+    --spacing-4x-large: 24px;
+    --spacing-5x-large: 32px;
+    --spacing-6x-large: 40px;
+    --spacing-7x-large: 56px;
+
+    /* Layout sizes */
+    --size-dot: 12px;
+    --size-bar-height: 40px;
+    --size-tag-height: 24px;
+    --size-tag-min-height: 32px;
+    --size-card-min-height: 74px;
+    --size-index: 1.5rem;
+    --size-index-sm: 1.25rem;
+    --size-label-min: 5rem;
+    --size-label-max: 8rem;
+    --page-max-width: 1120px;
+    --page-min-width: 320px;
+
+    /* Border */
+    --border-width-small: 1px;
+    --border-width-medium: 2px;
+    --focus-ring-width: 3px;
+
+    /* Page inset – mobile (default) */
+    --space-page: var(--spacing-medium);
+    --page-padding-block: var(--spacing-3x-large);
+    --page-padding-inline: var(--spacing-medium);
+    --terminal-padding-block: var(--spacing-3x-large);
+    --terminal-padding-inline: var(--spacing-x-large);
+
+    /* Shadow */
+    --shadow: 0 var(--spacing-4x-large) 60px var(--shadow-color);
+    --shadow-card-hover: 0 var(--spacing-small) var(--spacing-4x-large)
+      var(--shadow-card-hover-color);
+
+    /* Motion */
+    --transition-fast: 160ms ease;
+    --animation-entry: 0.3s ease;
+    --animation-entry-stagger: 130ms;
+    --animation-entry-offset: -6px;
+
+    /* Stacking */
+    --z-draft: 50;
+  }
+
+  @media (--md) {
     :root {
-        /* Radius */
-        --radius-none: 0;
-        --radius-sm: 7px;
-        --radius-card: 9px;
-        --radius: 14px;
-        --radius-round: 999px;
-
-        /* Spacing */
-        --spacing-none: 0;
-        --spacing-4x-small: 2px;
-        --spacing-3x-small: 4px;
-        --spacing-2x-small: 6px;
-        --spacing-x-small: 8px;
-        --spacing-small: 10px;
-        --spacing-medium: 12px;
-        --spacing-large: 14px;
-        --spacing-x-large: 16px;
-        --spacing-2x-large: 18px;
-        --spacing-3x-large: 20px;
-        --spacing-4x-large: 24px;
-        --spacing-5x-large: 32px;
-        --spacing-6x-large: 40px;
-        --spacing-7x-large: 56px;
-
-        /* Layout sizes */
-        --size-dot: 12px;
-        --size-bar-height: 40px;
-        --size-tag-height: 24px;
-        --size-tag-min-height: 32px;
-        --size-card-min-height: 74px;
-        --size-index: 1.5rem;
-        --size-index-sm: 1.25rem;
-        --size-label-min: 5rem;
-        --size-label-max: 8rem;
-        --page-max-width: 1120px;
-        --page-min-width: 320px;
-
-        /* Border */
-        --border-width-small: 1px;
-        --border-width-medium: 2px;
-        --focus-ring-width: 3px;
-
-        /* Page inset – mobile (default) */
-        --space-page: var(--spacing-medium);
-        --page-padding-block: var(--spacing-3x-large);
-        --page-padding-inline: var(--spacing-medium);
-        --terminal-padding-block: var(--spacing-3x-large);
-        --terminal-padding-inline: var(--spacing-x-large);
-
-        /* Shadow */
-        --shadow: 0 var(--spacing-4x-large) 60px rgb(39 50 71 / 10%);
-        --shadow-card-hover: 0 var(--spacing-small) var(--spacing-4x-large) rgb(143 111 150 / 10%);
-
-        /* Motion */
-        --transition-fast: 160ms ease;
-        --animation-entry: 0.3s ease;
-        --animation-entry-stagger: 130ms;
-        --animation-entry-offset: -6px;
-
-        /* Stacking */
-        --z-draft: 50;
+      --space-page: var(--spacing-5x-large);
+      --page-padding-block: var(--spacing-6x-large);
+      --page-padding-inline: var(--spacing-3x-large);
+      --terminal-padding-block: var(--spacing-4x-large);
+      --terminal-padding-inline: var(--spacing-4x-large);
     }
-
-    @media (--md) {
-        :root {
-            --space-page: var(--spacing-5x-large);
-            --page-padding-block: var(--spacing-6x-large);
-            --page-padding-inline: var(--spacing-3x-large);
-            --terminal-padding-block: var(--spacing-4x-large);
-            --terminal-padding-inline: var(--spacing-4x-large);
-        }
-    }
+  }
 }
