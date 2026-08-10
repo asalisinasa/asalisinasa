@@ -6,6 +6,7 @@ export interface TerminalSectionProps {
   title: string;
   ariaLabel: string;
   children: ReactNode;
+  className?: string;
   isHero?: boolean;
 }
 
@@ -13,12 +14,16 @@ export function TerminalSection({
   title,
   ariaLabel,
   children,
+  className,
   isHero = false
 }: TerminalSectionProps) {
   const TitleElement = isHero ? "h1" : "h2";
 
   return (
-    <section className={styles.section} aria-label={ariaLabel}>
+    <section
+      className={`${styles.section} ${className}`}
+      aria-label={ariaLabel}
+    >
       <TitleElement className={styles.command} id={title}>
         <span className={styles.icon} aria-hidden="true">
           ▸

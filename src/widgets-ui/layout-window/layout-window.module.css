@@ -45,6 +45,7 @@
   height: var(--size-bar-height);
   min-height: var(--size-bar-height);
   padding: 0 var(--spacing-2x-small) 0 var(--spacing-3x-large);
+  background-color: var(--card-bg);
   border-bottom: var(--border-width-small) solid var(--divider);
 }
 
