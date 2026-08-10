@@ -1,7 +1,7 @@
 import {
   TerminalSection,
   type TerminalSectionProps
-} from "@/ui/terminal-section";
+} from "@/widgets-ui/terminal-section";
 
 import styles from "./section-terminal-hero.module.css";
 

@@ -2,7 +2,7 @@ import type { CSSProperties } from "react";
 
 import type { ProfileLink } from "@/sanity/types";
 import { IconLink } from "@/ui/icons";
-import { TerminalSection } from "@/ui/terminal-section";
+import { TerminalSection } from "@/widgets-ui/terminal-section";
 
 import styles from "./section-connect.module.css";
 

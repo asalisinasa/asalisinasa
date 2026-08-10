@@ -14,7 +14,7 @@
 ## Conventions
 
 - **Content lives in Sanity** (hosted studio). Site-side client and GROQ queries are in `src/sanity/`; sections receive fetched data as props.
-- **Sections** are self-contained React Server Components under `src/app/(site)/_sections/*`, each with its own CSS Module. The `LayoutWindow` shell (`src/ui/layout-window/`) wraps them in a terminal-style card.
+- **Sections** are self-contained React Server Components under `src/app/(site)/_sections/*`, each with its own CSS Module. The `LayoutWindow` shell (`src/widgets-ui/layout-window/`) wraps them in a terminal-style card.
 - **Routing**: route group `(site)` keeps the group's components/lib/sections private to the home route. Closing `/` via `trailingSlash: true` in `next.config.ts`.
 - **Styling**: one CSS Module per component/section; shared tokens via `@import`-ed `tokens.css`. No CSS-in-JS.
 - **Path alias**: `@/*` → `./src/*` (tsconfig `paths`).

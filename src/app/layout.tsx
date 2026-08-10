@@ -5,8 +5,8 @@ import { draftMode } from "next/headers";
 import { SanityLive, sanityFetch } from "@/sanity/lib/live";
 import { siteSettingsQuery } from "@/sanity/queries";
 import type { SiteSettings } from "@/sanity/types";
-import { DisableDraftMode } from "@/ui/disable-draft-mode";
 import { ThemeProvider } from "@/ui/theme";
+import { DisableDraftMode } from "@/widgets-ui/disable-draft-mode";
 
 import "./globals.css";
 

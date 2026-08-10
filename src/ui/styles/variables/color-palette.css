@@ -9,7 +9,7 @@
     --divider: light-dark(#e3e7f1, #2a3046);
     --card-bg: light-dark(#ffffff, #23283b);
     --surface-mix: light-dark(#ffffff, #151827);
-    --tag-bg: light-dark(rgb(255 255 255 / 56%), rgb(35 40 59 / 78%));
+    --tag-bg: light-dark(rgb(255 255 255 / 56%), rgb(35 40 59 / 56%));
     --overlay-bg: light-dark(rgb(255 255 255 / 92%), rgb(28 32 50 / 92%));
     --page-glow-pink: light-dark(rgb(226 206 233 / 36%), rgb(114 81 124 / 28%));
     --page-glow-green: light-dark(rgb(206 233 212 / 42%), rgb(79 122 95 / 25%));
@@ -39,10 +39,10 @@
     --sand-accent: light-dark(#efa51d, #ffe6a0);
     --sand-dark: light-dark(#b88430, #e8c876);
     --sand-soft: light-dark(#ffe6a0, #e8c876);
-    --sand-border: light-dark(#efa51d, #b88430);
+    --sand-border: light-dark(#e8c876, #b88430);
 
     /* Effects */
-    --focus-ring: light-dark(#b56f00, #e8c876);
+    --focus-ring: light-dark(#e8c876, #e8c876);
     --shadow-color: light-dark(rgb(39 50 71 / 10%), rgb(0 0 0 / 35%));
     --shadow-card-hover-color: light-dark(
       rgb(143 111 150 / 10%),

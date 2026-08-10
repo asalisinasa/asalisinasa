@@ -2,8 +2,8 @@ import { sanityFetch } from "@/sanity/lib/live";
 import { homePageQuery } from "@/sanity/queries";
 import type { HomePage, HomePageSection } from "@/sanity/types";
 import { Container } from "@/ui/container";
-import { LayoutWindow } from "@/ui/layout-window";
 import { ThemeToggle } from "@/ui/theme";
+import { LayoutWindow } from "@/widgets-ui/layout-window";
 
 import { SectionConnect } from "./_sections/section-connect/section-connect";
 import { SectionTagGroups } from "./_sections/section-tag-groups/section-tag-groups";
