@@ -5,7 +5,7 @@ export default function NotFound() {
     <SystemStatus
       code={404}
       message="page not found"
-      detail="No route matches this URL."
+      detail="No route matches this URL"
     >
       <SystemStatusLink href="/">cd ~/</SystemStatusLink>
     </SystemStatus>

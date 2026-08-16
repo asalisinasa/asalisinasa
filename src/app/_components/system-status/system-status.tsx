@@ -49,7 +49,7 @@ export function SystemStatus({
                 digest: {digest}
               </p>
             ) : null}
-            {children ? <div className={styles.actions}>{children}</div> : null}
+            {children ? <div className={styles.actions} title="Go to the homepage">{children}</div> : null}
           </TerminalSection>
         </LayoutWindow.Main>
       </LayoutWindow>
