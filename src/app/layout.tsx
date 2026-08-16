@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { VisualEditing } from "next-sanity/visual-editing";
 import { draftMode } from "next/headers";
 
@@ -62,6 +63,7 @@ export default async function RootLayout({
       <body>
         <ThemeProvider>{children}</ThemeProvider>
         <SanityLive />
+        <Analytics />
         {(await draftMode()).isEnabled && (
           <>
             <DisableDraftMode />
