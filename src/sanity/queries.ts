@@ -52,5 +52,16 @@ export const homePageQuery = defineQuery(`
     }
 `);
 
+export const homePageUpdatedAtQuery = defineQuery(`
+    {
+        "documents": *[_id in ["siteSettings", "pageHome", "profile"]] {
+            _updatedAt
+        },
+        "sections": *[_id == "pageHome"][0].sections[]-> {
+            _updatedAt
+        }
+    }
+`);
+
 export type SiteSettingsResult = SiteSettings;
 export type HomePageResult = HomePage;

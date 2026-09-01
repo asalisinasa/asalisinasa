@@ -59,3 +59,12 @@ export type SiteSettings = {
   title: string;
   description: string;
 };
+
+type UpdatedAtDocument = {
+  _updatedAt: string;
+};
+
+export type HomePageUpdatedAt = {
+  documents: UpdatedAtDocument[] | null;
+  sections: UpdatedAtDocument[] | null;
+};
