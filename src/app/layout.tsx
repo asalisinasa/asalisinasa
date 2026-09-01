@@ -1,5 +1,5 @@
-import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import type { Metadata, Viewport } from "next";
 import { VisualEditing } from "next-sanity/visual-editing";
 import { draftMode } from "next/headers";
 
@@ -22,14 +22,41 @@ async function getSiteSettings(): Promise<SiteSettings | null> {
 
 const faviconIcons: NonNullable<Metadata["icons"]> = {
   icon: [
-    { url: "/favicon.ico", sizes: "any" },
-    { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-    { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" }
+    {
+      url: "/favicon-light-32x32.png",
+      sizes: "32x32",
+      type: "image/png",
+      media: "(prefers-color-scheme: light)"
+    },
+    {
+      url: "/favicon-dark-32x32.png",
+      sizes: "32x32",
+      type: "image/png",
+      media: "(prefers-color-scheme: dark)"
+    },
+    {
+      url: "/favicon-light.svg",
+      sizes: "any",
+      type: "image/svg+xml",
+      media: "(prefers-color-scheme: light)"
+    },
+    {
+      url: "/favicon-dark.svg",
+      sizes: "any",
+      type: "image/svg+xml",
+      media: "(prefers-color-scheme: dark)"
+    }
   ],
   apple: [
     { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
   ],
-  shortcut: "/favicon.ico"
+  other: [
+    {
+      rel: "mask-icon",
+      url: "/safari-pinned-tab.svg",
+      color: "#3f5a48"
+    }
+  ]
 };
 
 export const viewport: Viewport = {
